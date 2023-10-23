@@ -1,0 +1,49 @@
+.underline {
+    border-bottom: 2px solid black;
+    max-width: fit-content;
+    align-self: left;
+    font-family: "Lulo";
+    font-weight: 300;
+    margin: 2%;
+}
+
+.ptext {
+    font-size: x-large;
+    margin: 2%;
+}
+
+body {
+    /* background: linear-gradient(to bottom, #5b98c1, #ecf0f1); */
+    background: skyblue;
+
+}
+
+/* 
+.ptext{
+    font-family:Manrope;
+} */
+
+button {
+    /* background-color: rgba(51, 51, 51, 0.05); */
+    background-color: white;
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
