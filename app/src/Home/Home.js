@@ -19,6 +19,9 @@ import hoodie_back from './hoodie_back.png';
 
 
 const Home = () => {
+    const [hoodie, setHoodie] = useState(hoodie_front)
+    const [fade, setFade] = useState("fade-in");
+    // const [flag, setFlag] = useState(true)
 
     // useEffect( () => {
 
@@ -46,13 +49,37 @@ const Home = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
+
+            // if ( flag ){
+            //     setFade("fade-out");
+
+            //     setTimeout(() => {
+            //         setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
+            //         setFade("fade-in");
+            //     }, 1000); // Corresponds to the fade-out animation duration
+            //     setFlag(prev => !prev)
+            // }
+            // else{
+            //     setFade("fade-in");
+
+            //     setTimeout(() => {
+            //         setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
+            //         setFade("fade-out");
+            //     }, 1000); // Corresponds to the fade-out animation duration
+            //     setFlag(prev => !prev)
+
+            // }
+
             setFade("fade-out");
 
             setTimeout(() => {
                 setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
                 setFade("fade-in");
             }, 1000); // Corresponds to the fade-out animation duration
-        }, 6000);
+
+
+            
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -61,8 +88,7 @@ const Home = () => {
 
     
 
-    const [hoodie, setHoodie] = useState(hoodie_front)
-    const [fade, setFade] = useState("fade-in");
+
     // const buttonStyle = {
     //     fontSize:"2rem",
     //     padding:'2.5rem 5rem'
