@@ -1,8 +1,16 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './Home.css'  
 import Drexel from './athletics_D1.png'
 import Hoodie2 from './hoodie2.png'
 import { isMobile } from 'react-device-detect';
+
+import hoodie_front from './hoodie_front.png';
+import hoodie_back from './hoodie_back.png';
+
+import { motion, AnimatePresence } from "framer-motion";
+
+
+
 
 
 
@@ -12,6 +20,49 @@ import { isMobile } from 'react-device-detect';
 
 const Home = () => {
 
+    // useEffect( () => {
+
+    //     const interval = setInterval(() => {
+    //         setFade("fade-out");
+
+
+    //         // setHoodie((prev) => {
+    //         //     return prev === hoodie_back ? hoodie_front : hoodie_back
+    //         // });
+
+    //         setTimeout(() => {
+    //             setHoodie((prev) => {
+    //                 return prev === hoodie_back ? hoodie_front : hoodie_back
+    //             });                
+    //             setFade("fade-in");
+    //         }, 1000); // Corresponds to the fade-out animation duration
+
+    //     }, 4000);
+
+    //     return () => clearInterval(interval);
+
+    // }, [])
+
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade("fade-out");
+
+            setTimeout(() => {
+                setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
+                setFade("fade-in");
+            }, 1000); // Corresponds to the fade-out animation duration
+        }, 6000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+
+
+    
+
+    const [hoodie, setHoodie] = useState(hoodie_front)
+    const [fade, setFade] = useState("fade-in");
     // const buttonStyle = {
     //     fontSize:"2rem",
     //     padding:'2.5rem 5rem'
@@ -130,19 +181,26 @@ const Home = () => {
                     <div className='box' style={boxStyle}>
                         <h1 className='underline' style={textHeadStyle}>Who we are </h1>
 
-                        <p className='ptext' style={pStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                            culpa qui officia deserunt mollit anim id est laborum.
+                        <p className='ptext' style={pStyle}>
+                            We are a group of Jewish Israeli-American students 
+                            committed to supporting our community in Israel and 
+                            the U.S. The events of October 7th deeply impacted us
+                             and highlighted the challenges Jewish students face in
+                              universities. Despite the hardships, we stand united to 
+                              uphold our heritage in the diaspora. We may hail from 
+                              different regions, but our solidarity for Israel and 
+                              Jewish identity is unwavering. "Never Again is Now" 
+                              is more than a slogan; it's a vow to actively oppose
+                               antisemitism and honor the silent pledge to our ancestors. 
+                               We refuse to be silenced or intimidated. With pride and 
+                               determination, we uphold the legacy of the Jewish people, 
+                               unique and resilient. Never Again is Now!
 
                         </p>
                         
                     </div>
                     <div className='box' style={boxStyle2}>
-                        <img src={Hoodie2} alt="Sweatshirt" style={imgStyle}/>
+                        <img src={hoodie} alt="Sweatshirt" className={fade} style={imgStyle}/>
                     </div>
 
                 </div>
@@ -156,14 +214,23 @@ const Home = () => {
 
                     </div>
                     <div className='box' style={boxStyle2}>
-                        <h1 className='underline'>More text</h1>
-                        <p className='ptext' style={pStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                        <h1 className='underline'>What We're Doing</h1>
+                        <p className='ptext' style={pStyle}>
+                            We created these sweatshirts as a 
+                            reminder to everyone around us who 
+                            chants for our destruction and as a reminder, 
+                            most importantly, for ourselves, that we are not 
+                            Jews with trembling knees. We will not let them 
+                            win. Each sweatshirt's proceeds will be donated 
+                            to the Friends of the IDF (FIDF), who support 
+                            the soldiers in every way they can to help them 
+                            bring the hostages home and win the war of good vs evil. 
+                            The FIDF has people on the ground with Israel, 
+                            allowing them to determine what the IDF needs 
+                            and purchase it. We are all one big family. 
+                            When you come after one Jew, you come after 
+                            all of us. Together, we will win. Our light 
+                            will dispel the darkness. Am Yisrael Chai!
 
                         </p>
 
@@ -176,9 +243,8 @@ const Home = () => {
                 <div >
                     
                     <stripe-buy-button
-
-                        buy-button-id="buy_btn_1O2JosFPIgNIxSQ6UuSwQqUe"
-                        publishable-key="pk_test_51O0lj3FPIgNIxSQ67LM0R0vot4JE68k8yJmuKnSEK5wmxytnF0zuVI5yoQV7bNUk4wM63lTiicVKR4Gr6TdTgPDK00tqLwDGPw"
+                        buy-button-id="buy_btn_1OC9mOFPIgNIxSQ60dPJzGuC"
+                        publishable-key="pk_live_51O0lj3FPIgNIxSQ6x1y7v0ErqsCIZUseGyRFlJjKAV589qGRticWQVcTbJ0qvAF21HJJCTvErzyCe2AXe1FBS8UJ008E8ckRgY"
                     >
                     </stripe-buy-button>
                 </div>
