@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import './Home.css'  
 import Drexel from './athletics_D1.png'
-import Hoodie2 from './hoodie2.png'
+// import Hoodie2 from './hoodie2.png'
 import { isMobile } from 'react-device-detect';
 
 import hoodie_front from './hoodie_front.png';
 import hoodie_back from './hoodie_back.png';
 
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
 
 
 
