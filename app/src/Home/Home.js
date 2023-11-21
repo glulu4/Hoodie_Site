@@ -242,21 +242,17 @@ const Home = () => {
                     <div className='box' style={boxStyle2}>
                         <h1 className='underline'>What We're Doing</h1>
                         <p className='ptext' style={pStyle}>
-                            We created these sweatshirts as a 
-                            reminder to everyone around us who 
-                            chants for our destruction and as a reminder, 
-                            most importantly, for ourselves, that we are not 
-                            Jews with trembling knees. We will not let them 
-                            win. Each sweatshirt's proceeds will be donated 
-                            to the Friends of the IDF (FIDF), who support 
-                            the soldiers in every way they can to help them 
-                            bring the hostages home and win the war of good vs evil. 
-                            The FIDF has people on the ground with Israel, 
-                            allowing them to determine what the IDF needs 
-                            and purchase it. We are all one big family. 
-                            When you come after one Jew, you come after 
-                            all of us. Together, we will win. Our light 
-                            will dispel the darkness. Am Yisrael Chai!
+                            We created these sweatshirts as a reminder to everyone 
+                            around us who chants for our destruction and as a reminder, 
+                            most importantly, for ourselves, that we are not Jews with 
+                            trembling knees. We will not let them win. Each sweatshirt's 
+                            proceeds will be donated to the Friends of the IDF (FIDF), who 
+                            support the soldiers in every way they can to help them bring 
+                            the hostages home and win the war of good vs evil. The FIDF has 
+                            people on the ground in Israel, allowing them to determine what 
+                            the IDF needs and purchases it. We are all one big family. When 
+                            you come after one Jew, you come after all of us. Together, we 
+                            will win. Our light will dispel the darkness. Am Yisrael Chai!
 
                         </p>
 
