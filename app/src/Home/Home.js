@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react'
+// import React, {useEffect, useState} from 'react'
+import React from 'react'
 import './Home.css'  
-import Drexel from './athletics_D1.png'
+// import Drexel from './athletics_D1.png'
 // import Hoodie2 from './hoodie2.png'
 import { isMobile } from 'react-device-detect';
 
@@ -19,70 +20,27 @@ import hoodie_back from './hoodie_back.png';
 
 
 const Home = () => {
-    const [hoodie, setHoodie] = useState(hoodie_front)
-    const [fade, setFade] = useState("fade-in");
-    // const [flag, setFlag] = useState(true)
+    // const [hoodie, setHoodie] = useState(hoodie_front)
+    // const [fade, setFade] = useState("fade-in");
 
-    // useEffect( () => {
 
+
+    // useEffect(() => {
     //     const interval = setInterval(() => {
+
     //         setFade("fade-out");
 
-
-    //         // setHoodie((prev) => {
-    //         //     return prev === hoodie_back ? hoodie_front : hoodie_back
-    //         // });
-
     //         setTimeout(() => {
-    //             setHoodie((prev) => {
-    //                 return prev === hoodie_back ? hoodie_front : hoodie_back
-    //             });                
+    //             setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
     //             setFade("fade-in");
     //         }, 1000); // Corresponds to the fade-out animation duration
 
-    //     }, 4000);
-
-    //     return () => clearInterval(interval);
-
-    // }, [])
-
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-
-            // if ( flag ){
-            //     setFade("fade-out");
-
-            //     setTimeout(() => {
-            //         setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
-            //         setFade("fade-in");
-            //     }, 1000); // Corresponds to the fade-out animation duration
-            //     setFlag(prev => !prev)
-            // }
-            // else{
-            //     setFade("fade-in");
-
-            //     setTimeout(() => {
-            //         setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
-            //         setFade("fade-out");
-            //     }, 1000); // Corresponds to the fade-out animation duration
-            //     setFlag(prev => !prev)
-
-            // }
-
-            setFade("fade-out");
-
-            setTimeout(() => {
-                setHoodie(prev => prev === hoodie_back ? hoodie_front : hoodie_back);
-                setFade("fade-in");
-            }, 1000); // Corresponds to the fade-out animation duration
-
 
             
-        }, 5000);
+    //     }, 5000);
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
 
 
@@ -226,7 +184,8 @@ const Home = () => {
                         
                     </div>
                     <div className='box' style={boxStyle2}>
-                        <img src={hoodie} alt="Sweatshirt" className={fade} style={imgStyle}/>
+                        <img src={hoodie_back} alt="Sweatshirt" style={imgStyle}/>
+                        {/* className={fade} */}
                     </div>
 
                 </div>
@@ -235,7 +194,7 @@ const Home = () => {
                 <div className='row' style={rowStyle2}>
                     <div className='box' style={boxStyle}>
 
-                        <img src={Drexel} alt="Drexel logo" style={imgStyle} />
+                        <img src={hoodie_front} alt="Drexel logo" style={imgStyle} />
 
 
                     </div>
